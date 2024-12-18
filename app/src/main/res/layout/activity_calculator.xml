@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calculatorBackground"
+    tools:context=".CalculatorActivity"
+    >
+
+    <TextView
+        android:id="@+id/resultTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end|center_vertical"
+        android:hint="0.0"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/verticalLinearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultTv"
+        app:layout_constraintWidth_percent=".75">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="6dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:text="Ac"
+                android:textSize="24sp"
+                android:textColor="#A5A5A5"
+                android:background="@drawable/calculator_button_grey_bg"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:text="c"
+                android:background="@drawable/calculator_button_grey_bg"
+                android:textColor="#A5A5A5"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:onClick="onOperatorClick"
+                android:text="/" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="6dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:text="7"
+                android:onClick="onDigitClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="6dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="6dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="6dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="23"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/calculatorCustomButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="10"
+                android:background="@drawable/calculator_button_dark_grey_bg"
+                android:onClick="onDigitClick"
+                android:text="." />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/verticalLinearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="@id/verticalLinearLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/verticalLinearLayout1"
+        app:layout_constraintTop_toTopOf="@id/verticalLinearLayout1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/calculatorCustomButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginVertical="6dp"
+            android:layout_weight="17"
+            android:onClick="onOperatorClick"
+            android:text="*" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/calculatorCustomButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginVertical="6dp"
+            android:layout_weight="17"
+            android:onClick="onOperatorClick"
+            android:text="-" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/calculatorCustomButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginVertical="6dp"
+            android:layout_weight="25"
+            android:onClick="onOperatorClick"
+            android:text="+" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/calculatorCustomButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginVertical="6dp"
+            android:layout_weight="25"
+            android:onClick="onEqualClick"
+            android:text="=" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#E41F1F"
+        android:src="@drawable/person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/emailEd"
+        app:layout_constraintBottom_toBottomOf="@id/emailEd"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toStartOf="@id/emailEd"
+        />
+    <EditText
+        android:id="@+id/emailEd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Write Your email here"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingVertical="12dp"
+        app:layout_constraintTop_toBottomOf="@id/topImage"
+        app:layout_constraintStart_toEndOf="@id/emailTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/passwordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        app:layout_constraintTop_toTopOf="@id/passwordEd"
+        app:layout_constraintStart_toStartOf="@id/emailTv"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/passwordEd"
+        />
+    <EditText
+        android:id="@+id/passwordEd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Write your password here"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/passwordTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTv"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:padding="8dp"
+        />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_margin="18dp"
+        android:paddingVertical="18dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
